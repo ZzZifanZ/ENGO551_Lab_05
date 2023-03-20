@@ -106,6 +106,7 @@
         }
 
         const options = {
+          useSSL:true,
           enableHighAccuracy: true,
           timeout: 5000,
           maximumAge: 0
@@ -130,8 +131,6 @@
           //log(typeof port);
 
           //log(geoJSONString);
-          
-
           mqtt = new Paho.MQTT.Client(host,parseInt(port),"clientjs");
           var options ={
             useSSL: true,
@@ -166,7 +165,6 @@
         function ShareLocation(){
           log("Acquring Geo Info");
           if ("geolocation" in navigator){
-
             navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
           } else {
           }
