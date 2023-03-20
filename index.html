@@ -116,10 +116,11 @@
           //log(typeof port);
           mqtt = new Paho.MQTT.Client(host,parseInt(port),"clientjs");
           var options ={
+            useSSL: true,
             timeout: 3,
             onSuccess: onConnect,
             onFailure: onFailure,
-            useSSL: true
+            
           };
           mqtt.onMessageArrived=onMessageArrived
           mqtt.connect(options);//connect
@@ -133,6 +134,7 @@
 
           mqtt = new Paho.MQTT.Client(host,parseInt(port),"clientjs");
           var options ={
+            useSSL: true,
             timeout: 3,
             onSuccess: onConnectGeo,
             onFailure: onFailure,
