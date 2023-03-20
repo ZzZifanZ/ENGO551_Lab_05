@@ -119,6 +119,7 @@
             timeout: 3,
             onSuccess: onConnect,
             onFailure: onFailure,
+            useSSL: true
           };
           mqtt.onMessageArrived=onMessageArrived
           mqtt.connect(options);//connect
