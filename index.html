@@ -132,7 +132,7 @@
 
           //log(geoJSONString);
           mqtt = new Paho.MQTT.Client(host,parseInt(port),"clientjs");
-          var options ={
+          var options2 ={
             useSSL: true,
             timeout: 3,
             onSuccess: onConnectGeo,
@@ -140,7 +140,7 @@
           };
 
           mqtt.onMessageArrived=onMessageArrivedGeo
-          mqtt.connect(options);//connect
+          mqtt.connect(options2);//connect
         }
 
         function disableInput() {
